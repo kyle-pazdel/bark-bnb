@@ -1,3 +1,5 @@
+
+
 ### INDEX
 
 GET http://localhost:3000/reservations
@@ -8,8 +10,22 @@ GET http://localhost:3000/reservations/1/
 
 ###CREATE
 
-POST http://localhost:3000/reservations/new
+POST http://localhost:3000/reservations
+Content-Type: application/json
+
+{
+  "user_id": 1,
+  "room_id": 1,
+  "start_date": "01012022",
+  "end_date": "01012023",
+  "price": 200,
+  "total": 500  
+}
 
 ### UPDATE
 
 PATCH GET http://localhost:3000/reservations/1/edit
+Content-Type: application/json
+{
+
+}

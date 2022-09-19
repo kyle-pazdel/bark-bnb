@@ -11,8 +11,9 @@ class ReservationsController < ApplicationController
     render json: reservation.as_json
   end
 
+
   def create
-    reservation = Reservation.create(
+    reservation = Reservation.new(
       user_id = params["user_id"],
       room_id = params["room_id"],
       start_date = params["start_date"],
@@ -20,9 +21,9 @@ class ReservationsController < ApplicationController
       price = params["price"],
       total = params["total"]
     )
+    reservation.save
 
     render json: reservation.as_json
-
   end
 
   def update

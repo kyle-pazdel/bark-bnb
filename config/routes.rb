@@ -5,7 +5,10 @@ Rails.application.routes.draw do
   # root "articles#index"
 
 
-  resources :reservations
+  get "/reservations" => "reservations#index"
+  get "/reservations/id" => "reservations#show"
+  post "/reservations" => "reservations#create"
+  patch "/reservations/id" => "reservations#update" 
 
   get "/login" => "sessions#new"
   post "/sessions" => "sessions#create"
