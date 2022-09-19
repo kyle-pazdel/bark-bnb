@@ -1,0 +1,15 @@
+### INDEX
+
+GET http://localhost:3000/reservations
+
+### SHOW
+
+GET http://localhost:3000/reservations/1/
+
+###CREATE
+
+POST http://localhost:3000/reservations/new
+
+### UPDATE
+
+PATCH GET http://localhost:3000/reservations/1/edit
