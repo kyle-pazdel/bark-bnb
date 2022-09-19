@@ -1,0 +1,10 @@
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "name": "fido",
+  "email": "fido@test.com",
+  "password": "password",
+  "password_confirmation": "password",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKQBhvtc8aujG18PB2AZVLoExogz6pzxxYC2K29-gs&s"
+}
