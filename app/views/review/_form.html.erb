@@ -1,4 +1,4 @@
-<%= form_with model: [ @reservation, @reservation.reviews.build ] do |form| %>
+<%= form_with model: [ @room, @room.reviews.build ] do |form| %>
   <p>
     <%= form.label :reservation_id %><br>
     <%= form.text_field :reservation_id %>
