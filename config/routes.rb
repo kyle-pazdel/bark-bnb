@@ -8,8 +8,13 @@ Rails.application.routes.draw do
   # rooms routes
   resources :rooms
 
-  # reservations routes
-  resources :reservations
+  get "/reservations" => "reservations#index"
+  get "/reservations/id" => "reservations#show"
+
+  get "/reserve" => "reservations#new"
+  post "/reservations" => "reservations#create"
+  patch "/reservations/id" => "reservations#update" 
+
 
   # authentication routes
   get "/login" => "sessions#new"
