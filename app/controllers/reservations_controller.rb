@@ -1,8 +1,6 @@
 class ReservationsController < ApplicationController
-
   def index
     reservations = Reservation.all
-
     render json: reservations.as_json
   end
 
@@ -15,7 +13,7 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.new
     render template: "reservations/new"
   end
-  
+
   def create
     @reservation = Reservation.new(
       user_id: params[:reservation][:user_id],
@@ -23,12 +21,12 @@ class ReservationsController < ApplicationController
       start_date: params[:reservation][:start_date],
       end_date: params[:reservation][:end_date],
       price: params[:reservation][:price],
-      total: params[:reservation][:total]
+      total: params[:reservation][:total],
     )
     if @reservation.save
       redirect_to "/"
     else
-      render :new, status: :unprocessable_entity 
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -44,5 +42,4 @@ class ReservationsController < ApplicationController
 
     render json: reservation.as_json
   end
-
 end
