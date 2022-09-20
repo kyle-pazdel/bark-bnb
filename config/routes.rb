@@ -13,8 +13,7 @@ Rails.application.routes.draw do
 
   get "/reserve" => "reservations#new"
   post "/reservations" => "reservations#create"
-  patch "/reservations/id" => "reservations#update" 
-
+  patch "/reservations/id" => "reservations#update"
 
   # authentication routes
   get "/login" => "sessions#new"
