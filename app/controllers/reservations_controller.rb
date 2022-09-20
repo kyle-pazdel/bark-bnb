@@ -7,8 +7,8 @@ class ReservationsController < ApplicationController
   end
 
   def show
-    reservation = Reservation.find_by(id: params["id"])
-    render json: reservation.as_json
+    @reservation = Reservation.find_by(id: params["id"])
+    render template: "reservations/show"
   end
 
   def new

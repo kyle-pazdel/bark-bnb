@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :rooms
 
   get "/reservations" => "reservations#index"
-  get "/reservations/id" => "reservations#show"
+  get "/reservations/:id" => "reservations#show"
 
   get "/reserve" => "reservations#new"
   post "/reservations" => "reservations#create"
