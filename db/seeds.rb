@@ -61,3 +61,12 @@ Room.create(
   total_bedrooms: 1,
   total_bathrooms: 1,
 )
+
+Reservation.create(
+  user_id: 1,
+  room_id: 2,
+  start_date: DateTime.new(2022, 10, 10),
+  end_date: DateTime.new(2022, 11, 10),
+  price: Room.find_by(id: 2).price,
+  total: Room.find_by(id: 2).price,
+)
