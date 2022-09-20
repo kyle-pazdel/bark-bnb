@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
-  # users
-  get "/signup" => "users#new"
-  post "/users" => "users#create"
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
   # root "articles#index"
 
+  # users routes
+  get "/signup" => "users#new"
+  post "/users" => "users#create"
+
+  # rooms routes
+  resources :rooms
 
   get "/reservations" => "reservations#index"
   get "/reservations/id" => "reservations#show"
@@ -15,8 +15,9 @@ Rails.application.routes.draw do
   post "/reservations" => "reservations#create"
   patch "/reservations/id" => "reservations#update" 
 
+
+  # authentication routes
   get "/login" => "sessions#new"
   post "/sessions" => "sessions#create"
   get "/logout" => "sessions#destroy"
-
 end
