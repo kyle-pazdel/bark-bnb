@@ -61,3 +61,5 @@ Room.create(
   total_bedrooms: 1,
   total_bathrooms: 1,
 )
+
+# Reservation
