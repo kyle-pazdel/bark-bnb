@@ -62,6 +62,14 @@ Room.create(
   total_bathrooms: 1,
 )
 
+# Reviews Seeds
+Review.create(
+  reservation_id: 1,
+  rating: 5.0,
+  comment: "Woof!",
+)
+
+# Reservation Seeds
 Reservation.create(
   user_id: 1,
   room_id: 2,
