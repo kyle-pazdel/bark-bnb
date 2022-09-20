@@ -6,10 +6,11 @@ Rails.application.routes.draw do
   post "/users" => "users#create"
 
   # rooms routes
-  resources :rooms
-
+  resources :rooms do
+    resources :reviews
+  end
   get "/reservations" => "reservations#index"
-  get "/reservations/id" => "reservations#show"
+  get "/reservations/:id" => "reservations#show"
 
   get "/reserve" => "reservations#new"
   post "/reservations" => "reservations#create"

@@ -1,5 +1,14 @@
 <%= render @room %>
 
+
+<h3>Reviews</h3>
+<%= render @room.reviews %>
+
+<h4>Add a review:</h4>
+<%= render 'review/form' %>
+
+
+
 <div>
   <%= link_to "Back to rooms", rooms_path %>
 </div>

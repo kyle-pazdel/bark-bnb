@@ -5,13 +5,13 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    @reservation = Reservation.find(params[:reservation_id])
-    @review = @reservation.reviews.create(
-      reservation_id: params["reservation_id"],
-      rating: params["rating"],
-      comment: params["comment"],
+    @room = Room.find(params["room_id"])
+    @review = Review.create(
+      reservation_id: params["review"]["reservation_id"],
+      rating: params["review"]["rating"],
+      comment: params["review"]["comment"],
     )
-    redirect_to "/reservations"
+    redirect_to room_path(@room)
   end
 
   def show
