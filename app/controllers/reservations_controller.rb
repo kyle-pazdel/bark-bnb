@@ -11,19 +11,25 @@ class ReservationsController < ApplicationController
     render json: reservation.as_json
   end
 
-
+  def new
+    @reservation = Reservation.new
+    render template: "reservations/new"
+  end
+  
   def create
-    reservation = Reservation.new(
-      user_id = params["user_id"],
-      room_id = params["room_id"],
-      start_date = params["start_date"],
-      end_date = params["end_date"],
-      price = params["price"],
-      total = params["total"]
+    @reservation = Reservation.new(
+      user_id: params[:reservation][:user_id],
+      room_id: params[:reservation][:room_id],
+      start_date: params[:reservation][:start_date],
+      end_date: params[:reservation][:end_date],
+      price: params[:reservation][:price],
+      total: params[:reservation][:total]
     )
-    reservation.save
-
-    render json: reservation.as_json
+    if @reservation.save
+      redirect_to "/"
+    else
+      render :new, status: :unprocessable_entity 
+    end
   end
 
   def update

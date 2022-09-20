@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  # users
+  get "/signup" => "users#new"
+  post "/users" => "users#create"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
@@ -7,6 +10,8 @@ Rails.application.routes.draw do
 
   get "/reservations" => "reservations#index"
   get "/reservations/id" => "reservations#show"
+
+  get "/reserve" => "reservations#new"
   post "/reservations" => "reservations#create"
   patch "/reservations/id" => "reservations#update" 
 

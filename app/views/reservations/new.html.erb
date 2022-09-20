@@ -1,0 +1,50 @@
+<h1>Reserve</h1>
+<%= form_with model: @reservation do |form| %>
+
+  <div>
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+    <% @reservation.errors.full_messages_for(:user_id).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  <div>
+    <%= form.label :room_id %>
+    <%= form.text_field :room_id %>
+    <% @reservation.errors.full_messages_for(:room_id).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  
+  <div>
+    <%= form.label :start_date %>
+    <%= form.text_field :start_date %>
+    <% @reservation.errors.full_messages_for(:start_date).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  <div>
+    <%= form.label :end_date %>
+    <%= form.text_field :end_date %>
+    <% @reservation.errors.full_messages_for(:end_date).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  <div>
+    <%= form.label :price %>
+    <%= form.text_field :price %>
+    <% @reservation.errors.full_messages_for(:price).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  <div>
+    <%= form.label :total %>
+    <%= form.text_field :total %>
+    <% @reservation.errors.full_messages_for(:total).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
