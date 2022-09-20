@@ -62,4 +62,19 @@ Room.create(
   total_bathrooms: 1,
 )
 
-# Reservations
+# Reservation Seeds
+Reservation.create(
+  user_id: 1,
+  room_id: 1,
+  start_date: nil,
+  end_date: nil,
+  price: nil,
+  total: nil,
+)
+
+# Reviews Seeds
+Review.create(
+  reservation_id: 1,
+  rating: 5.0,
+  comment: "Woof!",
+)
