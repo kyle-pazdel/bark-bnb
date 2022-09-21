@@ -2,36 +2,23 @@
 </div>
 
 <div>
-  <%= first_image_for(@room, 500, 400)%>
+  <%= title_image_for(room, 200, 100)%>
 </div>
 
 <div>
-  <%= room.address%>
+  Location: <%= room.city%>,   <%= room.state%>
 </div>
 <div>
-  <%= room.city%>
+  Address: <%= room.address%>
 </div>
+
 <div>
-  <%= room.state%>
-</div>
-<div>
-  <%= room.price%>
+  <%= room.price%> per night
 </div>
 <div>
   <%= room.description%>
 </div>
+
 <div>
-  <%= room.home_type%>
-</div>
-<div>
-  <%= room.room_type%>
-</div>
-<div>
-  <%= room.total_occupancy%>
-</div>
-<div>
-  <%= room.total_bedrooms%>
-</div>
-<div>
-  <%= room.total_bathrooms%>
+ Total occupancy: <%= room.total_occupancy%> dogs
 </div>

@@ -1,0 +1,41 @@
+<div id="<%= dom_id @room %>">
+</div>
+<div>
+  <%= first_image_for(@room, 500, 400)%>
+</div>
+<div>
+  <%= second_image_for(@room, 500, 400)%>
+</div>
+<div>
+  <%= third_image_for(@room, 500, 400)%>
+</div>
+
+
+<div>
+  Location: <%= @room.city%>,   <%= @room.state%>
+</div>
+<div>
+  Address: <%= @room.address%>
+</div>
+
+<div>
+  <%= @room.price%> per night
+</div>
+<div>
+  <%= @room.description%>
+</div>
+<div>
+  Building: <%= @room.home_type%>
+</div>
+<div>
+  Room: <%= @room.room_type%>
+</div>
+<div>
+  Total occupancy: <%= @room.total_occupancy%> dogs
+</div>
+<div>
+  Bedrooms: <%= @room.total_bedrooms%> 
+</div>
+<div>
+  Bathrooms: <%= @room.total_bathrooms%>
+</div>

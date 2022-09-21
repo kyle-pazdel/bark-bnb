@@ -1,10 +1,4 @@
-<%= render @room %>
-<div>
-  <%= second_image_for(@room, 500, 400)%>
-</div>
-<div>
-  <%= third_image_for(@room, 500, 400)%>
-</div>
+<%= render 'rooms/room_detailed', room_instance: @room_instance %>
 
 <h3>Reviews</h3>
 <%# <%= render @room.reviews %>
@@ -16,7 +10,6 @@
   
   <h4>Add a review:</h4>
   <%= render 'review/form' %>
-
 
 <div>
   <%= link_to "Back to rooms", rooms_path %>
