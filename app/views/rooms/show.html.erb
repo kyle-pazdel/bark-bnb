@@ -1,4 +1,4 @@
-<%= render @room %>
+<%= render 'rooms/room_detailed', room_instance: @room_instance %>
 
 
 <h3>Reviews</h3>
@@ -11,8 +11,6 @@
   
   <h4>Add a review:</h4>
   <%= render 'review/form' %>
-
-
 
 <div>
   <%= link_to "Back to rooms", rooms_path %>

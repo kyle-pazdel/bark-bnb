@@ -1,33 +1,19 @@
 <div id="<%= dom_id room %>">
 </div>
+<div>
+  Location: <%= room.city%>,   <%= room.state%>
+</div>
+<div>
+  Address: <%= room.address%>
+</div>
 
 <div>
-  <%= room.address%>
-</div>
-<div>
-  <%= room.city%>
-</div>
-<div>
-  <%= room.state%>
-</div>
-<div>
-  <%= room.price%>
+  <%= room.price%> per night
 </div>
 <div>
   <%= room.description%>
 </div>
+
 <div>
-  <%= room.home_type%>
-</div>
-<div>
-  <%= room.room_type%>
-</div>
-<div>
-  <%= room.total_occupancy%>
-</div>
-<div>
-  <%= room.total_bedrooms%>
-</div>
-<div>
-  <%= room.total_bathrooms%>
+ Total occupancy: <%= room.total_occupancy%> dogs
 </div>
