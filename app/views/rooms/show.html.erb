@@ -16,5 +16,5 @@
 </div>
 
 <div>
-  <%= link_to 'Reserve This Room', {:controller => "reservations", :action => "new", :room_id => @room.id} , :method=>:get  %>
+  <%= link_to 'Reserve This Room', {:controller => "reservations", :action => "new", :room_id => @room.id, :price => @room.price} , :method=>:get  %>
 </div>
