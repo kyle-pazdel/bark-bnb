@@ -2,13 +2,7 @@
 </div>
 
 <div>
-  <%= image_tag @room.room_images.first.url%>
-</div>
-<div>
-  <%= image_tag @room.room_images.second.url%>
-</div>
-<div>
-  <%= image_tag @room.room_images.third.url%>
+  <%= first_image_for(@room, 500, 400)%>
 </div>
 
 <div>
