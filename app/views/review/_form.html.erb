@@ -1,0 +1,13 @@
+<%= form_with model: [ @room, @room.reviews.build ] do |form| %>
+  <p>
+    <%= form.label :reservation_id %><br>
+    <%= form.text_field :reservation_id %>
+  </p>
+  <p>
+    <%= form.label :comment %><br>
+    <%= form.text_area :comment %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
