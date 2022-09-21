@@ -2,8 +2,15 @@
 </div>
 
 <div>
-  <%= image_tag(room.image)%>
+  <%= image_tag @room.room_images.first.url%>
 </div>
+<div>
+  <%= image_tag @room.room_images.second.url%>
+</div>
+<div>
+  <%= image_tag @room.room_images.third.url%>
+</div>
+
 <div>
   <%= room.address%>
 </div>
