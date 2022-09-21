@@ -62,6 +62,47 @@ Room.create(
   total_bathrooms: 1,
 )
 
+# # Room Images Seeds
+# Room One
+RoomImage.create(
+  room_id: 1,
+  url: "https://photos.zillowstatic.com/fp/ccd0d8d01783c6866927ee5e953bd0a6-uncropped_scaled_within_1536_1152.webp",
+)
+RoomImage.create(
+  room_id: 1,
+  url: "https://photos.zillowstatic.com/fp/a341d3a90cfde84415526f7272678f22-uncropped_scaled_within_1536_1152.webp",
+)
+RoomImage.create(
+  room_id: 1,
+  url: "https://photos.zillowstatic.com/fp/c501a3ec537be175a6beb30f9bd730f0-uncropped_scaled_within_1536_1152.webp",
+)
+# Room Two
+RoomImage.create(
+  room_id: 2,
+  url: "https://photos.zillowstatic.com/fp/322164a57b55ff39ab436ff87b117ab6-uncropped_scaled_within_1536_1152.webp",
+)
+RoomImage.create(
+  room_id: 2,
+  url: "https://photos.zillowstatic.com/fp/d73dd54599461533f73af1c2a28581a5-uncropped_scaled_within_1536_1152.webp",
+)
+RoomImage.create(
+  room_id: 2,
+  url: "https://photos.zillowstatic.com/fp/5152e40598154dbb9adaf265ec083e3b-uncropped_scaled_within_1536_1152.webp",
+)
+# Room Two
+RoomImage.create(
+  room_id: 3,
+  url: "https://photos.zillowstatic.com/fp/c5bc7f65fdc0fc85357c44e94944a3d8-uncropped_scaled_within_1536_1152.webp",
+)
+RoomImage.create(
+  room_id: 3,
+  url: "https://photos.zillowstatic.com/fp/d11756e3748eb16acf083106fe04f7d4-uncropped_scaled_within_1536_1152.webp",
+)
+RoomImage.create(
+  room_id: 3,
+  url: "https://photos.zillowstatic.com/fp/b871c8f9929fb545e0f4d068b9634a2b-uncropped_scaled_within_1536_1152.webp",
+)
+
 # Reviews Seeds
 Review.create(
   reservation_id: 1,
