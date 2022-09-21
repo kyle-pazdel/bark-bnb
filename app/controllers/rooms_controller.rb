@@ -1,5 +1,9 @@
 class RoomsController < ApplicationController
   def index
+    if current_user && current_user.is_admin
+      @rooms = Room.all
+      render template: "rooms/index"
+    end
     @rooms = Room.all
     @reservations = Reservation.all
     @reservations.each do |reservation|

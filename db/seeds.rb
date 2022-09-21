@@ -22,6 +22,15 @@ User.create(
   image: "https://www.akc.org/wp-content/uploads/2017/11/West-Highland-White-Terrier-laying-down-in-the-grass.jpg",
 )
 
+# Admin Seed
+User.create(
+  name: "Bob",
+  email: "bob@test.com",
+  password: "password",
+  password_confirmation: "password",
+  image: "https://www.akc.org/wp-content/uploads/2017/11/West-Highland-White-Terrier-laying-down-in-the-grass.jpg",
+)
+
 # Room Seeds
 Room.create(
   address: "610 Theatre Lane",
