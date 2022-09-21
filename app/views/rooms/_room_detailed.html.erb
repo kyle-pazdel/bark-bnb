@@ -1,6 +1,17 @@
 <div id="<%= dom_id @room %>">
 </div>
 <div>
+  <%= first_image_for(@room, 500, 400)%>
+</div>
+<div>
+  <%= second_image_for(@room, 500, 400)%>
+</div>
+<div>
+  <%= third_image_for(@room, 500, 400)%>
+</div>
+
+
+<div>
   Location: <%= @room.city%>,   <%= @room.state%>
 </div>
 <div>
