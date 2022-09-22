@@ -1,9 +1,12 @@
 <%= render 'rooms/room_detailed', room_instance: @room_instance %>
 
-
 <h3>Reviews</h3>
 <%# <%= render @room.reviews %>
+<div>
+  Rating: <%= room_rating(@room) %>
+</div>
 <% @room.reviews.each do |review|%>
+
   <% if review.rating %>
     <div>
     Rated: <%=review.rating %>
