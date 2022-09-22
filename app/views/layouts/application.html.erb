@@ -33,7 +33,11 @@
           </a>
           <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
             <li><a class="dropdown-item" href="/">Rooms</a></li>
-            <li><a class="dropdown-item" href="#">Login</a></li>
+            <% if current_user%>
+              <li><a class="dropdown-item" href="/logout">Logout</a></li>
+            <% else%>
+              <li><a class="dropdown-item" href="/login">Login</a></li>
+            <%end%>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
