@@ -3,6 +3,12 @@
     <%= form.label :reservation_id %><br>
     <%= form.text_field :reservation_id %>
   </p>
+
+  <div>
+  Rating:
+  <%= form.select :rating, [ 1, 2, 3, 4, 5], selected: 5 %>
+
+  </div>
   <p>
     <%= form.label :comment %><br>
     <%= form.text_area :comment %>
@@ -11,3 +17,4 @@
     <%= form.submit %>
   </p>
 <% end %>
+
