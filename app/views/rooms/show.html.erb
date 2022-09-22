@@ -1,29 +1,68 @@
-<%= render 'rooms/room_detailed', room_instance: @room_instance %>
-
-<h3>Reviews</h3>
-<%# <%= render @room.reviews %>
 <div>
-  Rating: <%= room_rating(@room) %>
+  <%= link_to "Back to rooms", rooms_path, class:"btn btn-primary" %>
 </div>
-<% @room.reviews.each do |review|%>
 
-  <% if review.rating %>
-    <div>
-    Rated: <%=review.rating %>
+<div class="container text-center">
+  <div class="row">
+    <div class = "col-12 pb-4">
+      <%= render 'rooms/room_detailed', room_instance: @room_instance %>
     </div>
-  <% end %>
-  <div>
-  <%= review.comment%>
+    <div class="col">
+      <div>
+        Location: <%= @room.city%>,   <%= @room.state%>
+      </div>
+      <div>
+        Address: <%= @room.address%>
+      </div>
+
+      <div>
+        <%= @room.price%> per night
+      </div>
+
+      <div>
+        <%= @room.description%>
+      </div>
+      <div>
+        Building: <%= @room.home_type%>
+      </div>
+      <div>
+        Room: <%= @room.room_type%>
+      </div>
+      <div>
+        Total occupancy: <%= @room.total_occupancy%> dogs
+      </div>
+      <div>
+        Bedrooms: <%= @room.total_bedrooms%> 
+      </div>
+      <div>
+        Bathrooms: <%= @room.total_bathrooms%>
+      </div>
+      <div class = "pt-4">
+        <%= link_to 'Reserve This Room', {:controller => "reservations", :action => "new", :room_id => @room.id, :price => @room.price} , :method=>:get, class:"btn btn-primary"  %>
+      </div>
+    </div>
+    <div class = "col">
+      <h3>Reviews</h3>
+      <%# <%= render @room.reviews %>
+      <div>
+        Rating: <%= room_rating(@room) %>
+      </div>
+      <% @room.reviews.each do |review|%>
+
+        <% if review.rating %>
+          <div>
+          Rated: <%=review.rating %>
+          </div>
+        <% end %>
+        <div>
+        <%= review.comment%>
+        </div>
+      <% end %>
+      <div id="add_a_review" class="pt-5">
+        <h4>Add a review:</h4>
+        <%= render 'review/form' %>
+      </div>
+    </div>
   </div>
-<% end %>
-
-<h4>Add a review:</h4>
-<%= render 'review/form' %>
-
-<div>
-  <%= link_to "Back to rooms", rooms_path %>
 </div>
 
-<div>
-  <%= link_to 'Reserve This Room', {:controller => "reservations", :action => "new", :room_id => @room.id, :price => @room.price} , :method=>:get  %>
-</div>
