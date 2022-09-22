@@ -2,8 +2,8 @@ class ReservationsController < ApplicationController
   before_action :authenticate_user, except: [:index, :show]
 
   def index
-    reservations = Reservation.all
-    render json: reservations.as_json
+    reservations = Reservation.where(user_id: current_user.id)
+    render template: "reservations/index"
   end
 
   def show
