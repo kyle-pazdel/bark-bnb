@@ -20,13 +20,16 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.new(
       user_id: current_user.id,
       room_id: params[:reservation][:room_id],
-      start_date: params[:reservation][:start_date],
-      end_date: params[:reservation][:end_date],
-      price: params[:reservation][:price],
-      total: params[:reservation][:total],
+      start_date: DateTime.new(params[:reservation]["start_date(1i)"].to_i, params[:reservation]["start_date(2i)"].to_i, params[:reservation]["start_date(3i)"].to_i),
+      end_date: DateTime.new(params[:reservation]["end_date(1i)"].to_i, params[:reservation]["end_date(2i)"].to_i, params[:reservation]["end_date(3i)"].to_i),
     )
+    end_date = DateTime.parse(@reservation.end_date.to_s)
+    start_date = DateTime.parse(@reservation.start_date.to_s)
+    @reservation.price = Room.find_by(id: params[:reservation][:room_id]).price
+    @reservation.total = @reservation.price * (end_date.day - start_date.day)
+
     if @reservation.save
-      redirect_to "/"
+      redirect_to "/reservations/#{@reservation.id}"
     else
       render :new, status: :unprocessable_entity
     end

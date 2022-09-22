@@ -2,8 +2,8 @@ class ReviewsController < ApplicationController
   before_action :authenticate_user, except: [:index]
 
   def index
-    review = Review.all
-    render json: review.as_json
+    @review = Review.all
+    render json: @review.as_json
   end
 
   def create
