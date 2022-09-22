@@ -1,18 +1,25 @@
 <%= form_with method: "post", url: "/sessions" do |form|%>
+   
+  <div class="text-center mt-10">
+    <h3>Login</h3>
+  </div>
+  <div class="container d-flex flex-column align-items-center bg-light p-5">
+    <div class="mb-2">
+      <%= form.label :email, class: "form-label", class: "me-3"%>
+      <%= form.text_field :email, class:"ms-3"%>
+    </div>
 
-  <div>
-    <%= form.label :email%>
-    <%= form.text_field :email%>
+    <div>
+      <%= form.label :password, class: "form-label"%>
+      <%= form.password_field :password%>
+    </div>
+
+    <div>
+      <%= form.submit "Submit", class: "btn btn-primary"%>
+    </div>
+  </div>
+  <div class="text-center">
+  <p>Not a user? <%= link_to "Sign Up", "/signup"%></p>
   </div>
 
-  <div>
-    <%= form.label :password%>
-    <%= form.password_field :password%>
-  </div>
-
-  <div>
-    <%= form.submit "Submit"%>
-  </div>
-  <%= link_to "Sign Up", "/signup"%>
- 
 <% end %>
