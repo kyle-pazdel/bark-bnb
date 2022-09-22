@@ -1,3 +1,20 @@
+<h1>My Reservations</h1>
 
+<div>
+  <div>
+    <% @reservations.each do |reservation| %>
+      <div>
+        <%= render reservation %>
+        
+        <p>
+          <%= link_to "Reservation:", "/reservations/#{reservation.id}" %>
+        </p>
+      </div>
+    <% end %>
+  </div>
+</div>
 
-<%= render reservation%>
+<div>
+  <%= link_to "See All Rooms", rooms_path%>
+</div>
+

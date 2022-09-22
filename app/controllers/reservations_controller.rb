@@ -2,7 +2,7 @@ class ReservationsController < ApplicationController
   before_action :authenticate_user, except: [:index, :show]
 
   def index
-    reservations = Reservation.where(user_id: current_user.id)
+    @reservations = Reservation.where(user_id: current_user.id)
     render template: "reservations/index"
   end
 
