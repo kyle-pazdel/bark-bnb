@@ -19,20 +19,6 @@
     <% end %>
   </div>
   <div>
-    <%= form.label :price %>
-    <%= form.text_field :price %>
-    <% @reservation.errors.full_messages_for(:price).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
-  <div>
-    <%= form.label :total %>
-    <%= form.text_field :total %>
-    <% @reservation.errors.full_messages_for(:total).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
-  <div>
     <%= form.submit %>
   </div>
 <% end %>
