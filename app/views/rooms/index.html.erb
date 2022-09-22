@@ -1,12 +1,15 @@
 <h1>Rooms</h1>
 
-<p>
-  <% @rooms.each do |room| %>
-
-    <%= render room %>
-    
-    <p>
-      <%= link_to "Room:", room %>
-    </p>
-  <% end %>
-</p>
+<div class="container-sm text-center">
+  <div class="row row-cols-2">
+    <% @rooms.each do |room| %>
+      <div class="col bg-light">
+        <%= render room %>
+        
+        <p>
+          <%= link_to "Room:", room %>
+        </p>
+      </div>
+    <% end %>
+  </div>
+</div>
