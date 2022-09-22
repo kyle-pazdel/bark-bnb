@@ -1,5 +1,10 @@
 <%= form_with model: [ @room, @room.reviews.build ] do |form| %>
-  <div>
+  <p>
+    <%= form.label :reservation_id %><br>
+    <%= form.text_field :reservation_id %>
+  </p>
+
+  <div class="pb-3">
  
   Rating:
   <%= form.select :rating, [ 1, 2, 3, 4, 5], selected: 5 %>
