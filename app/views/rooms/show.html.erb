@@ -1,28 +1,35 @@
-<%= render 'rooms/room_detailed', room_instance: @room_instance %>
-
-<h3>Reviews</h3>
-<%# <%= render @room.reviews %>
-<div>
-  Rating: <%= room_rating(@room) %>
-</div>
-<% @room.reviews.each do |review|%>
-
-  <% if review.rating %>
-    <div>
-    Rated: <%=review.rating %>
-    </div>
-  <% end %>
+<% flash.each do |type, msg| %>
   <div>
-  <%= review.comment%>
+    <%= msg %>
   </div>
 <% end %>
 
-<h4>Add a review:</h4>
-<%= render 'review/form' %>
+<%= render 'rooms/room_detailed', room_instance: @room_instance %>
 
-<div>
-  <%= link_to "Back to rooms", rooms_path %>
-</div>
+  <h3>Reviews</h3>
+  <%# <%= render @room.reviews %>
+  <div>
+    Rating: <%= room_rating(@room) %>
+  </div>
+  <% @room.reviews.each do |review|%>
+
+    <div>
+    Reservation:<%= review.reservation_id%>
+    </div>
+    <div>
+    Rated: <%=review.rating %>
+    </div>
+    <div>
+    <%= review.comment%>
+    </div>
+  <% end %>
+
+  <h4>Add a review:</h4>
+  <%= render 'review/form' %>
+
+  <div>
+    <%= link_to "Back to rooms", rooms_path %>
+  </div>
 
 <div>
   <%= link_to 'Reserve This Room', {:controller => "reservations", :action => "new", :room_id => @room.id, :price => @room.price} , :method=>:get  %>

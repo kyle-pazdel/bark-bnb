@@ -1,10 +1,6 @@
 <%= form_with model: [ @room, @room.reviews.build ] do |form| %>
-  <p>
-    <%= form.label :reservation_id %><br>
-    <%= form.text_field :reservation_id %>
-  </p>
-
   <div>
+ 
   Rating:
   <%= form.select :rating, [ 1, 2, 3, 4, 5], selected: 5 %>
 
@@ -16,5 +12,8 @@
   <p>
     <%= form.submit %>
   </p>
+
+
 <% end %>
+
 
