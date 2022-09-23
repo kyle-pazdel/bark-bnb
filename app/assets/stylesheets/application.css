@@ -16,7 +16,6 @@
 }
 
 .background-image {
-  background: url("bark-bnb-large.png");
+  background: url("bark-bnb-transparent.png");
   background-repeat: no-repeat;
-  background-size: 100%
-}
+  background-size: 100%;
