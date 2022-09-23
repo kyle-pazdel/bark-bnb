@@ -27,13 +27,12 @@
           <% if current_user%>
             <li><a class="dropdown-item" href="/reservations">My Reservations</a></li>
           <%end%>
+          <li><hr class="dropdown-divider"></li>
           <% if current_user%>
             <li><a class="dropdown-item" href="/logout">Logout</a></li>
           <% else%>
             <li><a class="dropdown-item" href="/login">Login</a></li>
           <%end%>
-        <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#">Separated link</a></li>
       </ul>
     </li>
   </ul>
@@ -42,3 +41,4 @@
     <%= yield %>
   </body>
 </html>
+
