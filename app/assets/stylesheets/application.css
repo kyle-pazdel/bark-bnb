@@ -9,7 +9,8 @@
 .logo-large {
   display: block;
   margin: 0;
-  padding; 0;
+  padding;
+  0;
   fill: #3498db;
   width: 40em;
   height: 40em
@@ -24,8 +25,17 @@
 .avatar-image {
   display: block;
   margin: 1em;
-  padding; 1em;
+  padding: 1em;
   fill: #3498db;
   width: 2em;
   height: 2em;
-  }
+}
+
+.thumbnail-link {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: #ccc;
+  border: 1px solid #ff0000;
+
+}
