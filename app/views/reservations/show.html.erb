@@ -1,5 +1,11 @@
-<%= render @reservation %>
 
-<div>
-  <%= link_to "Back to reservations", "/reservations" %>
+<div class="container text-center d-flex justify-content-center mt-10 ">
+  <div class="card bg-light" style="width: 18rem;">
+    <div class="card-body">
+      <p class="card-text">
+      <%= render @reservation %>
+      <p>
+    <%= link_to "Back to reservations", "/reservations", class:"btn btn-primary"%>
+    </div>
+  </div>
 </div>

@@ -1,20 +1,20 @@
-<h1>My Reservations</h1>
+<h3 class="mt-5 ms-5">My Reservations</h3>
 
 <div>
-  <div>
-    <% @reservations.each do |reservation| %>
-      <div>
+  <% @reservations.each do |reservation| %>
+    <div>
+      <div class="card mb-3 bg-light text-center" style="width: 18rem;">
+        <div class="card-body">
+        <p class="card-text">
         <%= render reservation %>
-        
-        <p>
-          <%= link_to "Reservation:", "/reservations/#{reservation.id}" %>
         </p>
-      </div>
-    <% end %>
-  </div>
+        <%=link_to "Reservation Details", "/reservations/#{reservation.id}", class:"btn btn-primary"%>
+        </div>
+    </div>      
+  <% end %>
 </div>
 
 <div>
-  <%= link_to "See All Rooms", rooms_path%>
+  <%= link_to "View Available Rooms", rooms_path, class:"ms-5"%>
 </div>
 
