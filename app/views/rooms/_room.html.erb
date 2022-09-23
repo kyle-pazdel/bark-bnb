@@ -1,15 +1,11 @@
 
-<div id="<%= dom_id room %>">
-</div>
-
-
 <div class="card" style="width: 20rem;">
   <div id="<%= dom_id room %>">
   </div>
 
   <div class="card-img-top">
   <%= link_to room do %>
-  <%= title_image_for(room, 400, 300)%>
+  <%= title_image_for(room, 200, 100)%>
   <% end %>
 
   </div>
@@ -41,5 +37,4 @@
     Total occupancy: <%= room.total_occupancy%> dogs
     </div>--->
   </div>
-
 </div>
