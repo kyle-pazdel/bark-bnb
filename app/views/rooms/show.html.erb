@@ -7,39 +7,42 @@
     <div class = "col-12 pb-4">
       <%= render 'rooms/room_detailed', room_instance: @room_instance %>
     </div>
-    <div class="col">
-      <div>
-        Location: <%= @room.city%>,   <%= @room.state%>
-      </div>
-      <div>
-        Address: <%= @room.address%>
-      </div>
+    
+      <div class="col m-4">
+        <div class="card d-flex align-items-center" style="width: 20rem;">
+          <div class="m-3">
+            <strong class="border-bottom border-3 border-warning"><%=@room.address%></strong>
+          </div>
+          
+          <div class="card-text mb-1">
+            <%= @room.city%>,   <%= @room.state%>
+          </div>
 
-      <div>
-        <%= @room.price%> per night
-      </div>
-
-      <div>
-        <%= @room.description%>
-      </div>
-      <div>
-        Building: <%= @room.home_type%>
-      </div>
-      <div>
-        Room: <%= @room.room_type%>
-      </div>
-      <div>
-        Total occupancy: <%= @room.total_occupancy%> dogs
-      </div>
-      <div>
-        Bedrooms: <%= @room.total_bedrooms%> 
-      </div>
-      <div>
-        Bathrooms: <%= @room.total_bathrooms%>
-      </div>
-      <div class = "pt-4">
-        <%= link_to 'Reserve This Room', {:controller => "reservations", :action => "new", :room_id => @room.id, :price => @room.price} , :method=>:get, class:"btn btn-primary"  %>
-      </div>
+          <div class="card-text mb-1 w-50 fst-italic" style="">
+            <%= @room.description%>
+          </div>
+          <div class="card-text mb-1">
+            Building: <%= @room.home_type%>
+          </div>
+          <div class="card-text mb-1">
+            Room: <%= @room.room_type%>
+          </div>
+          <div class="card-text mb-1">
+            Total occupancy: <%= @room.total_occupancy%> dogs
+          </div>
+          <div class="card-text mb-1">
+            Bedrooms: <%= @room.total_bedrooms%> 
+          </div>
+          <div class="card-text mb-1">
+            Bathrooms: <%= @room.total_bathrooms%>
+          </div>
+          <div class="card-text mb-1">
+            $<%= @room.price%> per night
+          </div>
+          <div class = "pt-4">
+            <%= link_to 'Reserve This Room', {:controller => "reservations", :action => "new", :room_id => @room.id, :price => @room.price} , :method=>:get, class:"btn btn-primary"  %>      
+          </div>
+        </div>
     </div>
     <div class = "col">
       <h3>Reviews</h3>

@@ -1,31 +1,37 @@
 
+<div class="card" style="width: 20rem;">
+  <div id="<%= dom_id room %>">
+  </div>
 
-<div id="<%= dom_id room %>">
-</div>
+  <div class="card-img-top">
+    <%= title_image_for(room, 200, 100)%>
+  </div>
 
-<div>
-  <%= title_image_for(room, 200, 100)%>
-</div>
+  <div class="card-body">
 
-<div>
-  Rating: <%= room_rating(room) %>
-</div>
+    <div >
+      <strong class="border-bottom border-3 border-warning"><%=room.address%></strong>
+    </div>
+    
 
-<div>
-  Location: <%= room.city%>,   <%= room.state%>
-</div>
-<div>
-  Address: <%= room.address%>
-</div>
+    
 
-<div>
-  <%= room.price%> per night
-</div>
-<div>
-  <%= room.description%>
-</div>
+    <div class="card-text mb-1">
+       <%= room.city%>,   <%= room.state%>
+    </div>
+    
 
-<div>
-Total occupancy: <%= room.total_occupancy%> dogs
-</div>
+    <div class="card-text mb-1">
+      <%= room.price%> per night
+    </div>
 
+    <div class="card-text mb-1">
+      Rating: <%= room_rating(room) %>
+    </div>
+    
+    <%= link_to "View Room", room, class: "btn btn-primary" %>
+    <!---<div>
+    Total occupancy: <%= room.total_occupancy%> dogs
+    </div>--->
+  </div>
+</div>
