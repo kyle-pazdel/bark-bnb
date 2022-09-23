@@ -1,0 +1,31 @@
+.logo {
+  display: block;
+  margin: 0 auto;
+  fill: #3498db;
+  width: 3em;
+  height: 3em
+}
+
+.logo-large {
+  display: block;
+  margin: 0;
+  padding; 0;
+  fill: #3498db;
+  width: 40em;
+  height: 40em
+}
+
+.background-image {
+  background: url("bark-bnb-transparent.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.avatar-image {
+  display: block;
+  margin: 1em;
+  padding; 1em;
+  fill: #3498db;
+  width: 2em;
+  height: 2em;
+  }
