@@ -1,0 +1,15 @@
+.logo {
+  display: block;
+  margin: 0 auto;
+  fill: #3498db;
+  width: 3em;
+  height: 3em
+}
+
+.logo-large {
+  display: block;
+  margin: 0 auto;
+  fill: #3498db;
+  width: 10em;
+  height: 10em
+}
