@@ -1,4 +1,5 @@
 module RoomsHelper
+
   def room_rating(room)
     review = room.reviews
     ratings = review.pluck(:rating)
@@ -14,21 +15,21 @@ module RoomsHelper
 
   def title_image_for(room, width = "", height = "")
     @image = room.room_images.first.url
-    return image_tag(@image, alt: "#{room.description} image one", width: width, height: height)
+    return image_tag(@image, alt: "#{room.description} image one", width: width, height: height, class: "", style: "")
   end
 
   def first_image_for(room, width = "", height = "")
     @image = room.room_images.first.url
-    return image_tag(@image, alt: "#{room.description} image one", width: width, height: height, class: "img-fluid object-fit: contain")
+    return image_tag(@image, alt: "#{room.description} image one", width: width, height: height, class: "img-fluid rounded", style: "object-fit: contain")
   end
 
   def second_image_for(room, width = "", height = "")
     @image = room.room_images.second.url
-    return image_tag(@image, alt: "#{room.description} image one", width: width, height: height, class: "img-fluid")
+    return image_tag(@image, alt: "#{room.description} image one", width: width, height: height, class: "img-fluid rounded", style: "object-fit: contain")
   end
 
   def third_image_for(room, width = "", height = "")
     @image = room.room_images.third.url
-    return image_tag(@image, alt: "#{room.description} image one", width: width, height: height, class: "img-fluid object-fit: contain")
+    return image_tag(@image, alt: "#{room.description} image one", width: width, height: height, class: "img-fluid rounded", style: "object-fit: contain")
   end
 end

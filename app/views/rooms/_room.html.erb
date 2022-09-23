@@ -4,7 +4,10 @@
   </div>
 
   <div class="card-img-top">
-    <%= title_image_for(room, 200, 100)%>
+  <%= link_to room do %>
+  <%= title_image_for(room, 200, 100)%>
+  <% end %>
+
   </div>
 
   <div class="card-body">
