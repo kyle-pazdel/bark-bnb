@@ -3,23 +3,27 @@
 
 <div>
   <% room = Room.find_by(id: reservation.room_id)%>
-  <%= "Your stay at #{room.address}"%>
+  <%# <%= "Your stay at #{room.address}"%> 
+  <p>Your stay at <strong class="border-bottom border-3 border-warning"><%="#{room.address}"%></strong>
 </div>
 
-<div>
-<p>Start Date</p>
+<div class="mb-3">
+<p><strong>Start Date</strong></p>
   <%= reservation.start_date.strftime("%A %B %Y")%>
 </div>
 
 <div>
-  <p>End Date</p>
+  <p><strong>End Date</strong></p>
   <%= reservation.end_date.strftime("%A %B %Y")%>
+  
 </div>
 <div>
-  <p>Nightly Rate</p>
+  <p><h5>Nightly Rate</h5>
   <%= reservation.price%>
+  </p>
 </div>
 <div>
-<p>Total</p>
+<p><h5>Total</h5>
   <%= reservation.total%>
+  </p>
 </div>
