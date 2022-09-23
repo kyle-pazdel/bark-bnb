@@ -1,9 +1,9 @@
-
+<body class="background-image">
 <%= form_with model: @reservation do |form| %>
 
 <div class="text-center mt-10">
   <h3>Reserve</h3>
-  <div class="container bg-light">
+  <div class="container bg-light opacity-75">
       <%= hidden_field(:reservation, :room_id, :value => params[:room_id]) %>
       
       <div class="mb-3 mt-3 pt-5">
@@ -30,3 +30,5 @@
       <%= link_to "Back to rooms", rooms_path%>
     </div>
 </div>
+
+</body>
