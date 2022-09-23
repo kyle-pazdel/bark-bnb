@@ -8,8 +8,15 @@
 
 .logo-large {
   display: block;
-  margin: 0 auto;
+  margin: 0;
+  padding; 0;
   fill: #3498db;
-  width: 10em;
-  height: 10em
+  width: 40em;
+  height: 40em
+}
+
+.background-image {
+  background: url("bark-bnb-large.png");
+  background-repeat: no-repeat;
+  background-size: 100%
 }
