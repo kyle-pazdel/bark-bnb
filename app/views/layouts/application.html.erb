@@ -21,27 +21,27 @@
   
   <div class="navbar-sm bg-light sticky-top">
     <ul class="nav nav-tabs">
-      <li>
-          <a class="navbar-brand" href="/">
-              <%= image_tag 'bark-bnb-favicon.png', class: "logo"%>
-          </a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Links</a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="/">Rooms</a></li>
-            <% if current_user%>
-              <li><a class="dropdown-item" href="/reservations">My Reservations</a></li>
-            <%end%>
-            <li><hr class="dropdown-divider"></li>
-            <% if current_user%>
-              <li><a class="dropdown-item" href="/logout">Logout</a></li>
-            <% else%>
-              <li><a class="dropdown-item" href="/login">Login</a></li>
-            <%end%>
-        </ul>
-      </li>
-      <!---<li style="list-style-type: none"><img class="d-flex flex-row-reverse avatar-image" src="<%=image_url("dog_avatar.png")%>"></li>--->
+        <li>
+            <a class="navbar-brand" href="/">
+                <%= image_tag 'bark-bnb-favicon.png', class: "logo"%>
+            </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Links</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/">Rooms</a></li>
+              <% if current_user%>
+                <li><a class="dropdown-item" href="/reservations">My Reservations</a></li>
+              <%end%>
+              <li><hr class="dropdown-divider"></li>
+              <% if current_user%>
+                <li><a class="dropdown-item" href="/logout">Logout</a></li>
+              <% else%>
+                <li><a class="dropdown-item" href="/login">Login</a></li>
+              <%end%>
+          </ul>
+        </li>
+      <li style="list-style-type: none" class = "position-absolute top-0 end-0"><img class=" avatar-image" src="<%=image_url("dog_avatar.png")%>"></li>
     </ul>
   </div>
 
