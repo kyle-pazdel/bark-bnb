@@ -1,4 +1,5 @@
 module RoomsHelper
+
   def room_rating(room)
     review = room.reviews
     ratings = review.pluck(:rating)
