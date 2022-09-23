@@ -1,13 +1,15 @@
 
-<div class="container-sm text-center">
-  <div class="row row-cols-2">
+<div class="container-lg text-center">
+  <div class="row row-cols-2 m-2">
     <% @rooms.each do |room| %>
-      <div class="col bg-light">
+      <div class="col bg-light mb-4">
         <%= render room %>
+
         
         <p class="btn btn-outline-primary">
           <%= link_to "Visit Room:", room %>
         </p>
+
       </div>
     <% end %>
   </div>

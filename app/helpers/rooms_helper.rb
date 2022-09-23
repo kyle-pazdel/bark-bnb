@@ -15,7 +15,7 @@ module RoomsHelper
 
   def title_image_for(room, width = "", height = "")
     @image = room.room_images.first.url
-    return image_tag(@image, alt: "#{room.description} image one", width: width, height: height, style: "object-fit: contain")
+    return image_tag(@image, alt: "#{room.description} image one", width: width, height: height, class: "", style: "")
   end
 
   def first_image_for(room, width = "", height = "")
