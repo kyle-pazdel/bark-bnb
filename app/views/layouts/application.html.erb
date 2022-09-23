@@ -42,6 +42,18 @@
           </ul>
         </li>
       <li style="list-style-type: none" class = "position-absolute top-0 end-0"><img class=" avatar-image" src="<%=image_url("dog_avatar.png")%>"></li>
+      <li><%  if request.path == "/" %>
+            <p class="position-absolute top-50 start-50 translate-middle" style="font-size:40px; font-style:oblique;font-weight:bold;">Available Rooms</p>
+          <% elsif request.path == "/reservations" %>
+            <p class="position-absolute top-50 start-50 translate-middle" style="font-size:40px; font-style:oblique;font-weight:bold;">Reservations</p>
+          <% elsif request.path[0..-2] == "/reservations/" %>
+            <p class="position-absolute top-50 start-50 translate-middle" style="font-size:40px; font-style:oblique;font-weight:bold;">Reservation Details</p>
+          <% elsif request.path[0..-2] == "/rooms/" %>
+            <p class="position-absolute top-50 start-50 translate-middle" style="font-size:40px; font-style:oblique;font-weight:bold;">Room Details</p>
+          <% elsif request.path == "/reserve" %>
+            <p class="position-absolute top-50 start-50 translate-middle" style="font-size:40px; font-style:oblique;font-weight:bold;">Reserve page</p>
+          <%  end %>
+      </li>
     </ul>
   </div>
 
