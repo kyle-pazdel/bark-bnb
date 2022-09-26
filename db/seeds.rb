@@ -13,6 +13,7 @@ User.create(
   password: "password",
   password_confirmation: "password",
   image: "https://www.thesprucepets.com/thmb/-ZHR_fLGpKN6LeWExVDhF2g75Kc=/2472x1854/smart/filters:no_upscale()/pitbull-dog-breeds-4843994-hero-db6922b6c8294b45b19c07aff5865790.jpg",
+  admin: true,
 )
 User.create(
   name: "Milo",

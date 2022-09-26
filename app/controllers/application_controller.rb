@@ -10,6 +10,6 @@ class ApplicationController < ActionController::Base
   end
 
   def authenticate_admin
-    redirect_to "/login", status: :see_other unless current_user
+    redirect_to "/login", status: :see_other unless current_user && current_user.admin
   end
 end
