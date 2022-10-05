@@ -4,4 +4,6 @@ class Room < ApplicationRecord
   has_many :users, through: :reservations
   has_many :reviews, through: :reservations
 
+  validates :address, presence: true, uniqueness: true
+  validates :price, presence: true
 end
