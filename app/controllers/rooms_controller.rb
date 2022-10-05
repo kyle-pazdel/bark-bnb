@@ -1,14 +1,16 @@
 class RoomsController < ApplicationController
   def index
-    @rooms = Room.all
-    render template: "rooms/index"
-
-    # @rooms = Room.all
-    # @reservations = Reservation.all
-    # @reservations.each do |reservation|
-    #   @rooms = @rooms.select { |room| room.id != reservation.room_id }
-    # end
-    # render template: "rooms/index"
+    if current_user && current_user.admin
+      @rooms = Room.all
+      render template: "rooms/index"
+    else
+      @rooms = Room.all
+      @reservations = Reservation.all
+      @reservations.each do |reservation|
+        @rooms = @rooms.select { |room| room.id != reservation.room_id }
+      end
+      render template: "rooms/index"
+    end
   end
 
   def show

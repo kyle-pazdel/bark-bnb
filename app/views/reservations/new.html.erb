@@ -5,6 +5,7 @@
   <h3>Reserve</h3>
   <div class="container bg-light opacity-75">
       <%= hidden_field(:reservation, :room_id, :value => params[:room_id]) %>
+
       
       <div class="mb-3 mt-3 pt-5">
         <%= form.label :start_date %>
@@ -20,6 +21,7 @@
           <div><%= message %></div>
         <% end %>
       </div>
+
       <div>
         <%= form.submit class:"btn btn-primary mb-5"%>
       </div>
@@ -28,7 +30,7 @@
   </div>
   <div>
       <%= link_to "Back to rooms", rooms_path%>
-    </div>d
+    </div>
 </div>
 
 </body>
