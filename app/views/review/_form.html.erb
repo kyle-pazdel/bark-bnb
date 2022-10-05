@@ -1,8 +1,10 @@
 
 <%= form_with model: [ @room, @room.reviews.build ] do |form| %>
   
-  <div>
-    <%= form.label "Leave a Review", class: "" %>
+  <div class="mb-2">
+    <div class="mb-2 h5">
+      <%= form.label "Leave a Review", class: "" %>
+    </div>
     <%= form.text_area :comment, class: "form-control" %>
   </div>
   <div class="input-group mb-3">
