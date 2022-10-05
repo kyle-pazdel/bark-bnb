@@ -1,19 +1,17 @@
-<h4>Add a review:</h4>
+
 <%= form_with model: [ @room, @room.reviews.build ] do |form| %>
-
-  <div class="pb-3">
- 
-  Rating:
-  <%= form.select :rating, [ 1, 2, 3, 4, 5], selected: 5 %>
-
+  
+  <div>
+    <%= form.label "Leave a Review", class: "" %>
+    <%= form.text_area :comment, class: "form-control" %>
   </div>
-  <p>
-    <%= form.label :comment %><br>
-    <%= form.text_area :comment %>
-  </p>
-  <p>
-    <%= form.submit %>
-  </p>
+  <div class="input-group mb-3">
+    <%= form.label "Rating", class: "form-control" %>
+    <%= form.select :rating, [ 1, 2, 3, 4, 5], selected: 5, class: "form-select", id: "inputGroupSelect01" %>
+  </div>
+  <div class="d-grid gap-2">
+    <%= form.submit "Submit", class: "btn btn-primary" %>
+  </div>
 
 
 <% end %>
