@@ -3,7 +3,7 @@ class RoomsController < ApplicationController
     if current_user && current_user.admin
       @rooms = Room.all
       render template: "rooms/index"
-    else
+    elsif current_user
       @rooms = Room.all
       @reservations = Reservation.all
       @reservations.each do |reservation|
