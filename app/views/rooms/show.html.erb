@@ -50,82 +50,86 @@
           </div>
         </div>
     </div>
-    <div class = "col">
-      <h3>Reviews</h3>
-      <%# <%= render @room.reviews %>
-      <div>
-        Rating: <%= room_rating(@room) %>
-      </div>
-      <% @room.reviews.each do |review|%>
-
-        <% if review.rating %>
-          <div>
-          Rated: <%=review.rating %>
+    
+    <div class="height-100 mt-5 col container">
+    
+      <div class="card-b p-3">
+          <div class="d-flex justify-content-between align-items-center">
+              <div class="ratings">
+                  <%if !@room.reviews%>
+                    <p>This room has no reviews</p>
+                  <%else%>
+                    <%if room_rating(@room) >= 1%>
+                      <i class="fa fa-star rating-color"></i>
+                    <%elsif room_rating(@room) <= 1%>
+                      <i class="fa fa-star"></i>
+                    <%end%>
+                    <%if room_rating(@room) >= 2%>
+                      <i class="fa fa-star rating-color"></i>
+                    <%elsif room_rating(@room) <= 2%>
+                      <i class="fa fa-star"></i>
+                    <%end%>
+                    <%if room_rating(@room) >= 3%>
+                      <i class="fa fa-star rating-color"></i>
+                    <%elsif room_rating(@room) <= 3%>
+                      <i class="fa fa-star"></i>
+                    <%end%>
+                    <%if room_rating(@room) >= 4%>
+                      <i class="fa fa-star rating-color"></i>
+                    <%elsif room_rating(@room) <= 4%>
+                      <i class="fa fa-star"></i>
+                    <%end%>
+                    <%if room_rating(@room) >= 5%>
+                      <i class="fa fa-star rating-color"></i>
+                    <%elsif room_rating(@room) <= 5%>
+                      <i class="fa fa-star"></i>
+                    <%end%>
+                  <%end%>
+              </div>
+              <h5 class="review-count"><%= @room.reviews.count%> Reviews</h5>
           </div>
-        <% end %>
-        <div>
-        <%= review.comment%>
-        </div>
+          
+
+          <% @room.reviews.each do |review|%>
+
+          <div class="mt-1 d-flex justify-content-between align-items-center">
+            <h5 class="review-stat"><%= review.comment%></h5>
+            <div class="small-ratings">
+              <% if review.rating %>
+                <%if review.rating >= 1%>
+                  <i class="fa fa-star rating-color"></i>
+                <%elsif review.rating <= 1%>
+                  <i class="fa fa-star"></i>
+                <%end%>
+                <%if review.rating >= 2%>
+                  <i class="fa fa-star rating-color"></i>
+                <%elsif review.rating <= 2%>
+                  <i class="fa fa-star"></i>
+                <%end%>
+                <%if review.rating >= 3%>
+                  <i class="fa fa-star rating-color"></i>
+                <%elsif review.rating <= 3%>
+                  <i class="fa fa-star"></i>
+                <%end%>
+                <%if review.rating >= 4%>
+                  <i class="fa fa-star rating-color"></i>
+                <%elsif review.rating <= 4%>
+                  <i class="fa fa-star"></i>
+                <%end%>
+                <%if review.rating >= 5%>
+                  <i class="fa fa-star rating-color"></i>
+                <%elsif review.rating <= 5%>
+                  <i class="fa fa-star"></i>
+                <%end%>
+              <%end%>
+            </div>
+          </div>
       <% end %>
-      <div id="add_a_review" class="pt-5">
-        <h4>Add a review:</h4>
+    </div>
+      <div id="add_a_review" class="mt-5 d-flex">
         <%= render 'review/form' %>
       </div>
-    </div>
-    <div class="height-100 container d-flex justify-content-center align-items-center">
-    
-    <div class="card-b p-3">
-        <div class="d-flex justify-content-between align-items-center">
-            <div class="ratings">
-                <%if !@room.reviews%>
-                  <p>This room has no reviews</p>
-                <%else%>
-                  <%if room_rating(@room) >= 1%>
-                    <i class="fa fa-star rating-color"></i>
-                  <%elsif room_rating(@room) <= 1%>
-                    <i class="fa fa-star"></i>
-                  <%end%>
-                  <%if room_rating(@room) >= 2%>
-                    <i class="fa fa-star rating-color"></i>
-                  <%elsif room_rating(@room) <= 2%>
-                    <i class="fa fa-star"></i>
-                  <%end%>
-                  <%if room_rating(@room) >= 3%>
-                    <i class="fa fa-star rating-color"></i>
-                  <%elsif room_rating(@room) <= 3%>
-                    <i class="fa fa-star"></i>
-                  <%end%>
-                  <%if room_rating(@room) >= 4%>
-                    <i class="fa fa-star rating-color"></i>
-                  <%elsif room_rating(@room) <= 4%>
-                    <i class="fa fa-star"></i>
-                  <%end%>
-                  <%if room_rating(@room) >= 5%>
-                    <i class="fa fa-star rating-color"></i>
-                  <%elsif room_rating(@room) <= 5%>
-                    <i class="fa fa-star"></i>
-                  <%end%>
-                <%end%>
-            </div>
-            <h5 class="review-count"><%= @room.reviews.count%> Reviews</h5>
-        </div>
-        
-        
-        <div class="mt-5 d-flex justify-content-between align-items-center">
-            <h5 class="review-stat">Cleanliness</h5>
-            <div class="small-ratings">
-                <i class="fa fa-star rating-color"></i>
-                <i class="fa fa-star rating-color"></i>
-                <i class="fa fa-star rating-color"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-            </div>
-            
-        </div>
-        
-        
-    
-</div>
   </div>
+      
 </div>
 
