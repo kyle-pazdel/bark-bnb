@@ -56,9 +56,7 @@
       <div class="card-b p-3 mb-5">
           <div class="d-flex justify-content-between align-items-center">
               <div class="ratings">
-                  <%if !@room.reviews%>
-                    <p>This room has no reviews</p>
-                  <%else%>
+                  <%if @room.reviews.first%>
                     <%if room_rating(@room) >= 1%>
                       <i class="fa fa-star rating-color"></i>
                     <%elsif room_rating(@room) <= 1%>
@@ -89,42 +87,42 @@
               <h5 class="review-count"><%= @room.reviews.count%> Reviews</h5>
           </div>
           
-
+        <%if @room.reviews%>
           <% @room.reviews.each do |review|%>
-
-          <div class="mt-1 d-flex justify-content-between align-items-center">
-            <h5 class="review-stat"><%= review.comment%></h5>
-            <div class="small-ratings">
-              <% if review.rating %>
-                <%if review.rating >= 1%>
-                  <i class="fa fa-star rating-color"></i>
-                <%elsif review.rating <= 1%>
-                  <i class="fa fa-star"></i>
+            <div class="mt-1 d-flex justify-content-between align-items-center">
+              <h5 class="review-stat"><%= review.comment%></h5>
+              <div class="small-ratings">
+                <% if review.rating %>
+                  <%if review.rating >= 1%>
+                    <i class="fa fa-star rating-color"></i>
+                  <%elsif review.rating <= 1%>
+                    <i class="fa fa-star"></i>
+                  <%end%>
+                  <%if review.rating >= 2%>
+                    <i class="fa fa-star rating-color"></i>
+                  <%elsif review.rating <= 2%>
+                    <i class="fa fa-star"></i>
+                  <%end%>
+                  <%if review.rating >= 3%>
+                    <i class="fa fa-star rating-color"></i>
+                  <%elsif review.rating <= 3%>
+                    <i class="fa fa-star"></i>
+                  <%end%>
+                  <%if review.rating >= 4%>
+                    <i class="fa fa-star rating-color"></i>
+                  <%elsif review.rating <= 4%>
+                    <i class="fa fa-star"></i>
+                  <%end%>
+                  <%if review.rating >= 5%>
+                    <i class="fa fa-star rating-color"></i>
+                  <%elsif review.rating <= 5%>
+                    <i class="fa fa-star"></i>
+                  <%end%>
                 <%end%>
-                <%if review.rating >= 2%>
-                  <i class="fa fa-star rating-color"></i>
-                <%elsif review.rating <= 2%>
-                  <i class="fa fa-star"></i>
-                <%end%>
-                <%if review.rating >= 3%>
-                  <i class="fa fa-star rating-color"></i>
-                <%elsif review.rating <= 3%>
-                  <i class="fa fa-star"></i>
-                <%end%>
-                <%if review.rating >= 4%>
-                  <i class="fa fa-star rating-color"></i>
-                <%elsif review.rating <= 4%>
-                  <i class="fa fa-star"></i>
-                <%end%>
-                <%if review.rating >= 5%>
-                  <i class="fa fa-star rating-color"></i>
-                <%elsif review.rating <= 5%>
-                  <i class="fa fa-star"></i>
-                <%end%>
-              <%end%>
+              </div>
             </div>
-          </div>
-      <% end %>
+          <% end %>
+        <%end%>
     </div>
       <div class="pt-4">
         <%= render 'review/form' %>

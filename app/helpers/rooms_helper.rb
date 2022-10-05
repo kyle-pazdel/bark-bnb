@@ -6,13 +6,8 @@ module RoomsHelper
     rating.each do |num|
       total += num.to_i
     end
-    # total = rating.sum
-    if total > 0
-      average = total / rating.length
-      average = average.round(2)
-    else
-      average = "This room has no ratings."
-    end
+    average = total / rating.length
+    average = average.round(2)
     return average
   end
 
