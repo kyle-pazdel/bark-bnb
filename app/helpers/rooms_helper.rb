@@ -6,9 +6,11 @@ module RoomsHelper
     rating.each do |num|
       total += num.to_i
     end
-    average = total / rating.length
-    average = average.round(2)
-    return average
+    if rating.length != 0
+      average = total / rating.length
+      average = average.round(2)
+      return average
+    end
   end
 
   def title_image_for(room, width = "", height = "")
