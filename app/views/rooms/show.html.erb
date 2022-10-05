@@ -72,6 +72,60 @@
         <%= render 'review/form' %>
       </div>
     </div>
+    <div class="height-100 container d-flex justify-content-center align-items-center">
+    
+    <div class="card-b p-3">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="ratings">
+                <%if !@room.reviews%>
+                  <p>This room has no reviews</p>
+                <%else%>
+                  <%if room_rating(@room) >= 1%>
+                    <i class="fa fa-star rating-color"></i>
+                  <%elsif room_rating(@room) <= 1%>
+                    <i class="fa fa-star"></i>
+                  <%end%>
+                  <%if room_rating(@room) >= 2%>
+                    <i class="fa fa-star rating-color"></i>
+                  <%elsif room_rating(@room) <= 2%>
+                    <i class="fa fa-star"></i>
+                  <%end%>
+                  <%if room_rating(@room) >= 3%>
+                    <i class="fa fa-star rating-color"></i>
+                  <%elsif room_rating(@room) <= 3%>
+                    <i class="fa fa-star"></i>
+                  <%end%>
+                  <%if room_rating(@room) >= 4%>
+                    <i class="fa fa-star rating-color"></i>
+                  <%elsif room_rating(@room) <= 4%>
+                    <i class="fa fa-star"></i>
+                  <%end%>
+                  <%if room_rating(@room) >= 5%>
+                    <i class="fa fa-star rating-color"></i>
+                  <%elsif room_rating(@room) <= 5%>
+                    <i class="fa fa-star"></i>
+                  <%end%>
+                <%end%>
+            </div>
+            <h5 class="review-count"><%= @room.reviews.count%> Reviews</h5>
+        </div>
+        
+        
+        <div class="mt-5 d-flex justify-content-between align-items-center">
+            <h5 class="review-stat">Cleanliness</h5>
+            <div class="small-ratings">
+                <i class="fa fa-star rating-color"></i>
+                <i class="fa fa-star rating-color"></i>
+                <i class="fa fa-star rating-color"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+            
+        </div>
+        
+        
+    
+</div>
   </div>
 </div>
 
