@@ -57,9 +57,12 @@ and in your browser navigate to the default Rails server location **http://local
 
 ## Authors
 
-Contributors names and contact info
+<p>
+  <a href="https://github.com/Rickienatividad">Rickie Natividad</a>
 
-[Rickie Natividad](https://github.com/Rickienatividad)
-[Abraham V R Rodriguez](https://github.com/avrrodriguez)
-[Jash Aubone](https://github.com/jackaubone)
-[Kyle Pazdel](https://github.com/kyle-pazdel)
+  <a href="https://github.com/avrrodriguez">Abraham V R Rodriguez</a>
+
+  <a href="https://github.com/jackaubone">Jack Aubone</a>
+
+  <a href="https://github.com/kyle-pazdel">Kyle Pazdel</a>
+</p>
