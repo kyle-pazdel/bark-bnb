@@ -1,24 +1,65 @@
-# README
+# Project Title
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Bark BnB
 
-Things you may want to cover:
 
-* Ruby version
+## Description
 
-* System dependencies
+Bark BnB is a clone of a popular short-term homestay web app, but for dogs. Pups can view available rooms, make reservations, and leave reviews with ratings on rooms that they have reserved.
 
-* Configuration
+<p>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh8ESWKgLbML64zDbKAp03wfxyPx9atRfC1M2Q1f0q&s" alt="" width="50%" >
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh8ESWKgLbML64zDbKAp03wfxyPx9atRfC1M2Q1f0q&s" alt="" width="50%" >
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh8ESWKgLbML64zDbKAp03wfxyPx9atRfC1M2Q1f0q&s" alt="" width="50%" >
+</p>
 
-* Database creation
+## Getting Started
 
-* Database initialization
+### Dependencies
 
-* How to run the test suite
+Bark BnB was created with Ruby 3.1.1 on Rails 7.0.4. on a postgreSQL server, and makes use of both the [bcrypt gem](https://github.com/bcrypt-ruby/bcrypt-ruby) and the [shrine gem](https://github.com/shrinerb/shrine).
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+### Installing
 
-* ...
+This app is currently in development, but can be cloned and run on a local server.
+
+Navigate to your desired directory and use command,
+```bash
+  git clone https://github.com/kyle-pazdel/say-what.git
+```
+then bundle install all dependencies with,
+```bash
+  bash/bundle install
+```
+
+run the following commands to create a rails database and migrate.
+```bash
+  bash/rails db:create
+
+  bash/rails db:migrate
+```
+
+Should you with to use the pup-themed seed data for both users and rooms, run the following command.
+```bash
+  bash/rails db:seed
+```
+
+### Executing program
+
+To execute a local instance of Bark BnB start a rails server with
+```bash
+bash/rails server
+```
+and in your browser navigate to the default Rails server location **http://localhost:3000**
+
+
+
+## Authors
+
+Contributors names and contact info
+
+[Rickie Natividad](https://github.com/Rickienatividad)
+[Abraham V R Rodriguez](https://github.com/avrrodriguez)
+[Jash Aubone](https://github.com/jackaubone)
+[Kyle Pazdel](https://github.com/kyle-pazdel)
