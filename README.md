@@ -6,9 +6,9 @@
 Bark BnB is a clone of a popular short-term homestay web app, but for dogs. Pups can view available rooms, make reservations, and leave reviews with ratings on rooms that they have reserved.
 
 <p align="center" dir="center">
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh8ESWKgLbML64zDbKAp03wfxyPx9atRfC1M2Q1f0q&s" alt="" width="70%" >
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh8ESWKgLbML64zDbKAp03wfxyPx9atRfC1M2Q1f0q&s" alt="" width="30%" >
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh8ESWKgLbML64zDbKAp03wfxyPx9atRfC1M2Q1f0q&s" alt="" width="30%" >
+  <img src="https://github.com/kyle-pazdel/bark-bnb/blob/main/app/assets/images/leave-review.png" alt="Reveiws on a room listing with a four-star rating" width="70%" >
+  <img src="https://github.com/kyle-pazdel/bark-bnb/blob/main/app/assets/images/rooms.png" alt="Home page with available rooms listed" width="45%" >
+  <img src="https://github.com/kyle-pazdel/bark-bnb/blob/main/app/assets/images/reservation.png" alt="Room reservation page with date selectors" width="45%" >
 </p>
 
 ## Getting Started
